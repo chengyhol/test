@@ -1,4 +1,4 @@
-This is the documentation repo for Npgsql.
+This is the documentation repo for Nhgdb.
 
 It contains conceptual documentation articles for Npgsql, Npgsql.EntityFrameworkCore.PostgreSQL (AKA EFCore.PG) and EntityFramework6.Npgsql (AKA EF6.PG).
 

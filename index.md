@@ -4,7 +4,7 @@
   </a>
 </p>
 
-# Npgsql - .NET Access to PostgreSQL
+# hgdb - .NET Access to PostgreSQL
 
 ## About
 
@@ -47,7 +47,7 @@ Past contributors to Npgsql:
 * Dave Page
 * Glen Parker
 * Hiroshi Saito
-* Kenji Uno
+* chengyuanhao
 
 ## Thanks
 
