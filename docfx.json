@@ -1,0 +1,91 @@
+﻿{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [ "src/**/*.csproj" ],
+          "exclude": [ "src/MSI/**", "src/VSIX/**", "**/bin/**", "**/obj/**" ],
+          "cwd": "Npgsql/"
+        }
+      ],
+      "dest": "obj/api/Npgsql",
+      "properties": {
+        "TargetFramework": "netstandard2.1"
+      }
+    },
+    {
+      "src": [
+        {
+          "files": [ "src/**/*.csproj" ],
+          "exclude": [ "**/bin/**", "**/obj/**", "Properties/NpgsqlStrings.*" ],
+          "cwd": "EFCore.PG"
+        }
+      ],
+      "dest": "obj/api/EFCore.PG",
+      "properties": {
+        "TargetFramework": "netstandard2.1"
+      }
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [ "**/*.yml" ],
+        "cwd": "obj/api/Npgsql",
+        "dest": "doc/api"
+      },
+      {
+        "files": [ "**/*.yml" ],
+        "cwd": "obj/api/EFCore.PG",
+        "dest": "efcore/api"
+      },
+      {
+        "files": [ "**.md", "toc.yml" ],
+        "cwd": "conceptual/Npgsql",
+        "dest": "doc"
+      },
+      {
+        "files": [ "**.md", "toc.yml" ],
+        "cwd": "conceptual/EFCore.PG",
+        "dest": "efcore"
+      },
+      {
+        "files": [ "**.md", "toc.yml" ],
+        "cwd": "conceptual/EF6.PG",
+        "dest": "ef6"
+      },
+      {
+        "files": [ "*.md", "dev/**.md", "toc.yml" ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [ "img/**", "CNAME" ]
+      }
+    ],
+    "xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ],
+    "globalMetadata": {
+      "_appTitle": "Npgsql Documentation",
+      "_appFooter": "© Copyright 2020 The Npgsql Development Team",
+      "_appLogoPath": "img/logo.svg",
+      "_appFaviconPath": "img/favicon.ico",
+      "_enableSearch": true,
+      "_gitContribute": {
+        "branch": "main"
+      }
+    },
+    "fileMetadata": {
+      "_gitContribute" : {
+        "obj/api/Npgsql/**.yml": {
+          "repo": "https://github.com/npgsql/Npgsql",
+          "branch": "stable"
+        },
+        "obj/api/EFCore.PG/**.yml": {
+          "repo": "https://github.com/npgsql/Npgsql.EntityFrameworkCore.PostgreSQL",
+          "branch": "stable"
+        }
+      }
+    },
+    "dest" : "live"
+  }
+}
